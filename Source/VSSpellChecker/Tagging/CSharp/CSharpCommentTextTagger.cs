@@ -413,6 +413,13 @@ namespace VisualStudio.SpellChecker.Tagging.CSharp
                         return;
                     }
                 }
+                if (p.Char() == 'v' && p.NextChar() == 'a' && p.NextNextChar() == 'r') // var key word
+                {
+                    p.Advance(3);
+
+                    p.State = State.Identifier;
+                    ScanDocComment(p);
+                }
                 else
                     p.Advance();
             }

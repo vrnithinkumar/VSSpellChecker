@@ -50,6 +50,9 @@ namespace VisualStudio.SpellChecker.Tagging.CSharp
         MultiLineString,
 
         /// <summary>Character ('.')</summary>
-        Character
+        Character,
+
+        /// <summary>Identifier "int count = 4;" </summary>
+        Identifier
     }
 }
